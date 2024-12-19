@@ -11,6 +11,11 @@
     <div class="container" style="text-align: center;">
         {% include 'navbar.html' %}
         <h1>this is home page </h1>
+        <form action="/home/" method="POST">
+            {% csrf_token %}
+            <input type="checkbox" name="name" id="">
+            <button>send</button>
+        </form>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt unde vitae asperiores quasi optio nemo
             officiis cumque aspernatur veritatis, vero at, ipsam voluptatibus excepturi nostrum ad debitis minus ullam
             perspiciatis, harum illo. Odit quibusdam voluptatem earum repudiandae reprehenderit nihil facere minus? Sed
@@ -24,6 +29,11 @@
             <hr>
             <h1>Student Details: </h1>
            <h2>student name: {{student.student_name}}</h2>
+           <hr>
+           {% for p in list_of_programs %}
+               <h2>{{p}}</h2>
+     
+           {% endfor %}
         </div>
         {% endif %}
     </div>

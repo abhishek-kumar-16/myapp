@@ -4,7 +4,13 @@ import datetime
 def home (request):
     print("this function is called from view")
     date=datetime.datetime.now()
-    isActive=True
+    isActive=True 
+    if request.method == "POST":
+     if(request.POST.get('name')):
+         isActive=True
+     else:
+         isActive=False    
+
     name="Abhishek"
     list_of_programs=[
         'wap to check even odd',
