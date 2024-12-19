@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+
+<body>
+    <div class="container" style="text-align: center;">
+        {% include 'navbar.html' %}
+        <h1>this is home page </h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt unde vitae asperiores quasi optio nemo
+            officiis cumque aspernatur veritatis, vero at, ipsam voluptatibus excepturi nostrum ad debitis minus ullam
+            perspiciatis, harum illo. Odit quibusdam voluptatem earum repudiandae reprehenderit nihil facere minus? Sed
+            voluptate, cum laborum quia vero tempore possimus aliquam.</p>
+            <button>contact us</button>
+            <!--accessing dynamic contents  -->
+            {% if isActive %}
+            <div>
+            <h1>today date is {{date}}</h1>
+            <h1>my name is {{name}}</h1>
+            <hr>
+            <h1>Student Details: </h1>
+           <h2>student name: {{student.student_name}}</h2>
+        </div>
+        {% endif %}
+    </div>
+</body>
+
+</html>
